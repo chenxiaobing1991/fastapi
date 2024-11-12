@@ -1,0 +1,30 @@
+version: '3'
+services:
+  finance_report:
+    container_name: finance_report
+    image: python/finance_report
+    build:
+      context: .
+    volumes:
+      - ./:/app
+    ports:
+      - 8000:8000
+    environment:
+      - CLIENT_ID=EaseUS.GQL.app
+      - CLIENT_SECRET="e;aMkFVfG1\\5"
+      - MERCHANT_CODE=CHENGDWM
+      - SRCRET_KEY=yc_gXSnH(o&*82wT@x3L
+      - DB_HOST=192.168.0.137
+      - DB_DATABASE=sales_performance
+      - DB_USERNAME=chengxiaobing
+      - DB_PASSWORD=LkAspYWOpHEAdEzGWwAm
+      - DB_PORT=3308
+      - CB_FTP_HOST=54.200.53.178
+      - CB_FTP_PORT=22
+      - CB__FTP_USER_NAME=JNhWTeq
+      - CB_FTP_PASSWORD=OkNV_4xorvcoNAQlx
+
+networks:
+  default:
+    name: finance_report
+
